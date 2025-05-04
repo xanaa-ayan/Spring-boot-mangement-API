@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "23a7c369-25d5-4602-8c6f-2149d070488a",
+		"name": "Staff Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44610028",
+		"_collection_link": "https://hanaan-3224985.postman.co/workspace/b104bf76-fdc8-4c28-88f5-dc6158700a6b/collection/44610028-23a7c369-25d5-4602-8c6f-2149d070488a?action=share&source=collection_link&creator=44610028"
+	},
+	"item": [
+		{
+			"name": "CRUD Operations",
+			"item": [
+				{
+					"name": "Create(POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Deko Hussien \",\r\n    \"position\": \"doctor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/staffs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"staffs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read All(GET)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/staffs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"staffs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read One (GET)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/staffs/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"staffs",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update(PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Deko Hussien \",\r\n    \"position\": \"Senior Manager Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/staffs/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"staffs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete(DELETE)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/staffs/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"staffs",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Error Scenarios",
+			"item": [
+				{
+					"name": "Wrong Method",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ali\",\r\n    \"salary\": \"3654\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/staffs/34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"staffs",
+								"34"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Header Validation",
+			"item": [
+				{
+					"name": "Header Validation",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "staffId",
+			"value": ""
+		}
+	]
+}
